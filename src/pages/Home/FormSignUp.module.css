@@ -1,0 +1,227 @@
+/* Outer Mirror Effect */
+.mirror {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+
+  padding: 10px;
+}
+
+/* Main container */
+.mainbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 960px;
+  height: auto;
+  border-radius: 40px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-direction: row;
+}
+
+/* Left side with image */
+/* Left side with image */
+.imgcontainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-grow: 1; /* Ensures it fills height */
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures it covers background */
+}
+
+/* Right Form Container */
+.formcontainer {
+  background: rgba(255, 255, 255, 0.9);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Handwriting Effect for "WELCOME BACK!" */
+.welcome {
+  font-family: "Playwrite HU", sans-serif;
+  font-weight: 200;
+  font-size: 28px;
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #6a5acd;
+  animation: handwriting 2.5s steps(15) forwards, blink 0.8s infinite;
+  filter: blur(4px);
+}
+
+/* Typing Effect */
+@keyframes handwriting {
+  0% {
+    width: 0;
+    filter: blur(4px);
+  }
+  80% {
+    filter: blur(1px);
+  }
+  100% {
+    width: 100%;
+    filter: blur(0);
+    border-right: none;
+  }
+}
+
+/* Cursor Blinking Effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+  border-bottom: #4a4a4a 1px dashed;
+}
+
+/* Input fields */
+.inputbox {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #5a5353;
+  border-radius: 20px;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+}
+
+.inputbox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+}
+
+/* Login Button */
+.loginbtn {
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6a5acd, #483d8b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginbtn:hover {
+  background: linear-gradient(90deg, #483d8b, #6a5acd);
+}
+
+/* Forgot Password */
+.forgot {
+  text-align: center;
+  color: #6a5acd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Signup Text */
+.signuptext {
+  text-align: center;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.signup {
+  color: #ff0b0b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .mainbox {
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .imgcontainer {
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+
+  .image {
+    max-width: 180px;
+  }
+
+  .formcontainer {
+    width: 100%;
+    padding: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .welcome {
+    font-size: 24px;
+  }
+
+  .inputbox {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .inputbox input {
+    font-size: 14px;
+  }
+
+  .loginbtn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .forgot {
+    font-size: 12px;
+  }
+
+  .signuptext {
+    font-size: 14px;
+  }
+}

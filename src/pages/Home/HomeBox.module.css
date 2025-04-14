@@ -1,0 +1,83 @@
+.mainbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 50px;
+}
+
+/* Left content styling */
+.leftcontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Heading Styling */
+.content h1 {
+  font-size: 3rem; /* Big text */
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Paragraph Styling */
+.content p {
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 2px; /* Character gap */
+  color: #ffffff;
+}
+
+/* Button Styling */
+.leftcontent button {
+  padding: 12px 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #6a5acd, #483d8b);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Aligns button in line with text */
+  margin-top: 20px; /* Creates gap between text and button */
+}
+
+.leftcontent button:hover {
+  background: linear-gradient(90deg, #483d8b, #6a5acd);
+  transform: scale(1.05);
+}
+
+/* Right content with Image */
+.rightcontent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When in view, slide the image left */
+.rightcontent.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image Styling */
+/* Image Styling - Increased Size */
+.rightcontent img {
+  width: 100%;
+  max-width: 500px; /* Increased from 400px to 500px */
+  transition: transform 0.3s ease-in-out;
+}
+
+.rightcontent img:hover {
+  transform: scale(1.15); /* Slightly increased hover effect */
+}

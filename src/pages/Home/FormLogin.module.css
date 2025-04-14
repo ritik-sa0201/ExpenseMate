@@ -1,0 +1,167 @@
+/* Outer Mirror Effect */
+.mirror {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 10px;
+}
+
+/* Main Container */
+.mainbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 960px;
+  border-radius: 40px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Left Image Container */
+.imgcontainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Right Form Container */
+.formcontainer {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.welcome {
+  font-family: "Playwrite HU", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+
+.inputbox {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #5a5353;
+  border-radius: 20px;
+}
+
+.inputbox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+/* Login Button */
+.loginbtn {
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6a5acd, #483d8b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginbtn:hover {
+  background: linear-gradient(90deg, #483d8b, #6a5acd);
+}
+
+.forgot {
+  text-align: center;
+  color: #6a5acd;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.signuptext {
+  text-align: center;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.signup {
+  color: #ff0b0b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainbox {
+    flex-direction: column;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+
+  .imgcontainer {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .image {
+    max-width: 180px;
+  }
+
+  .formcontainer {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .inputbox,
+  .loginbtn {
+    width: 100%;
+  }
+
+  .welcome {
+    font-size: 24px;
+  }
+
+  .forgot,
+  .signuptext {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,38 @@
+/* Heading styling */
+.heading {
+  font-family: "Playwrite HU", "sans-serif";
+  font-size: 22px;
+  color: rgb(168, 98, 98);
+  position: relative;
+  display: inline-block; /* Ensure the element only takes the width of the text */
+}
+
+/* Span (Mate) styling */
+.headingconti {
+  font-family: "Playwrite HU", "sans-serif";
+  font-size: 22px;
+  color: rgb(109, 117, 84);
+  position: relative;
+  display: inline-block; /* Ensure it takes the width of the span text */
+}
+
+/* Underline effect for both 'Expense' and 'Mate' */
+.heading::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgb(168, 98, 98),
+    rgb(109, 117, 84)
+  ); /* Gradient from Expense to Mate */
+  width: 0;
+  left: 0;
+  bottom: -4px; /* Position the underline slightly below the text */
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+/* Hover effect for the whole heading */
+.heading:hover::after {
+  width: 100%;
+}
