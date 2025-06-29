@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import FormLogin from "./FormLogin";
 import HomeBox from "./HomeBox";
 import HomeBox2 from "./HomeBox2";
-import HomeBox3 from "./HomeBox3";
+import HomeBox3 from "./Homebox3";
 
 import { ToggleLogin } from "../../slices/Loginreducer";
 import FormSignUp from "./FormSignup";
