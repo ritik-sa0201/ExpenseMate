@@ -1,5 +1,5 @@
 import { LuEye, LuEyeClosed } from "react-icons/lu";
-import styles from "./FormSignup.module.css";
+import styles from "./FormSignUp.module.css";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { NewUser } from "../../slices/Loginreducer";
